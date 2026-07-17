@@ -19,7 +19,7 @@
         </div>
       </header>
 
-      <section id="playfield" class="playfield" aria-label="Tengai 游戏与虚拟手柄">
+      <section id="playfield" class="playfield" aria-label="Tengai game and virtual controller">
         <div class="pad-side pad-left">
           <div id="touch-dpad" class="dpad" aria-label="方向键">
             <span class="dpad-key dpad-up" data-direction="up">▲</span>
@@ -31,6 +31,25 @@
         </div>
 
         <div class="screen-column">
+          <section
+            id="language-panel"
+            class="language-panel"
+            aria-labelledby="language-title"
+          >
+            <div class="language-screen">
+              <h2 id="language-title" class="language-title">LANGUAGE SELECT</h2>
+              <div
+                id="language-options"
+                class="language-options"
+                role="listbox"
+                aria-label="Language"
+              ></div>
+              <button id="language-confirm" class="language-confirm" type="button">
+                START OR A
+              </button>
+            </div>
+          </section>
+
           <section id="native-video-panel" class="screen-panel" hidden aria-label="游戏画面">
             <div class="canvas-frame native-frame-shell">
               <canvas id="native-frame"></canvas>
@@ -38,12 +57,12 @@
             <div id="native-frame-stats" class="frame-stats">等待执行</div>
           </section>
 
-          <section id="boot-panel" class="boot-panel" aria-live="polite">
+          <section id="boot-panel" class="boot-panel" hidden aria-live="polite">
             <span class="boot-spinner" aria-hidden="true"></span>
-            <strong id="boot-label">正在加载游戏…</strong>
+            <strong id="boot-label" data-i18n="boot_loading">LOADING GAME…</strong>
             <label id="drop-zone" class="drop-zone" for="asset-file" tabindex="0" hidden>
               <input id="asset-file" type="file" accept=".zip,application/zip" />
-              <span class="drop-title">选择游戏数据包</span>
+              <span class="drop-title">SELECT GAME DATA PACK</span>
             </label>
           </section>
 
@@ -60,7 +79,7 @@
       <div id="load-error" class="error-message" role="alert" hidden></div>
 
       <details id="diagnostics" class="diagnostics">
-        <summary>诊断</summary>
+        <summary data-i18n="diagnostics">DIAGNOSTICS</summary>
         <div class="diagnostic-body">
           <section id="summary" class="summary-grid" aria-live="polite" hidden>
             <article class="metric panel">
@@ -82,7 +101,7 @@
 
           <section id="audit-panel" class="panel diagnostic-panel" hidden aria-label="资源清单">
             <div class="panel-heading">
-              <h2>资源清单</h2><div id="audit-badge" class="badge">等待校验</div>
+              <h2 data-i18n="assets">ASSET MANIFEST</h2><div id="audit-badge" class="badge" data-i18n="waiting_validation">WAITING FOR VALIDATION</div>
             </div>
             <div class="table-wrap">
               <table>
@@ -94,11 +113,11 @@
 
           <section id="atlas-panel" class="panel diagnostic-panel" hidden aria-label="图块查看器">
             <div class="panel-heading atlas-heading">
-              <h2>图块</h2>
+              <h2 data-i18n="tiles">TILES</h2>
               <div class="atlas-controls">
                 <select id="atlas-source" aria-label="图块数据源"></select>
-                <button id="page-prev" type="button" aria-label="上一页">←</button>
-                <button id="page-next" type="button" aria-label="下一页">→</button>
+                <button id="page-prev" type="button" aria-label="Previous page">←</button>
+                <button id="page-next" type="button" aria-label="Next page">→</button>
               </div>
             </div>
             <div class="canvas-frame"><canvas id="tile-atlas" width="512" height="256"></canvas></div>
@@ -110,7 +129,7 @@
 
           <section class="panel diagnostic-panel log-panel" aria-label="诊断日志">
             <div class="panel-heading">
-              <h2>日志</h2><button id="clear-log" class="ghost-button" type="button">清空</button>
+              <h2 data-i18n="log">LOG</h2><button id="clear-log" class="ghost-button" type="button" data-i18n="clear">CLEAR</button>
             </div>
             <ol id="event-log" class="event-log" aria-live="polite"></ol>
           </section>

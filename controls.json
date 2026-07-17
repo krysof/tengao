@@ -1,8 +1,5 @@
 {
-  "schema": "tengai.controls/v1",
-  "display": {
-    "help_zh": "实时输入：1P 投币/开始为 5/1，方向键移动，Z/X/C 操作；2P 为 6/2、WASD、F/G/H；F2 重启进入测试模式，F3 为服务投币。也支持标准双手柄。"
-  },
+  "schema": "tengai.controls/v2",
   "touch": {
     "dpad": {
       "up": "p1_up",
@@ -14,35 +11,30 @@
       {
         "id": "coin",
         "slot": "coin",
-        "input": "p1_coin",
-        "label_zh": "投币"
+        "input": "p1_coin"
       },
       {
         "id": "start",
         "slot": "start",
-        "input": "p1_start",
-        "label_zh": "开始"
+        "input": "p1_start"
       },
       {
         "id": "button_c",
         "slot": "c",
         "input": "p1_button3",
-        "short_label": "C",
-        "label_zh": "辅助"
+        "short_label": "C"
       },
       {
         "id": "button_b",
         "slot": "b",
         "input": "p1_button2",
-        "short_label": "B",
-        "label_zh": "炸弹"
+        "short_label": "B"
       },
       {
         "id": "button_a",
         "slot": "a",
         "input": "p1_button1",
-        "short_label": "A",
-        "label_zh": "射击/蓄力"
+        "short_label": "A"
       }
     ]
   },
@@ -50,13 +42,11 @@
     "sources": [
       {
         "id": "tiles",
-        "binding": "tile_graphics",
-        "label_zh": "背景图块"
+        "binding": "tile_graphics"
       },
       {
         "id": "sprites",
-        "binding": "sprite_graphics",
-        "label_zh": "精灵图块"
+        "binding": "sprite_graphics"
       }
     ]
   },

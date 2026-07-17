@@ -1,0 +1,217 @@
+{
+  "schema": "tengai.locales/v1",
+  "default_language": "en",
+  "storage_key": "tengai.language",
+  "languages": [
+    {
+      "id": "ja-JP",
+      "html_lang": "ja",
+      "label": "日本語",
+      "selector": {
+        "title": "言語選択",
+        "confirm": "START または A"
+      },
+      "ui": {
+        "status_selecting": "言語を選択",
+        "status_loading": "ゲームを読み込み中…",
+        "status_running": "実行中",
+        "status_waiting_assets": "ゲームデータ待機中",
+        "status_start_failed": "起動失敗",
+        "status_core_failed": "WASM コア読み込み失敗",
+        "boot_loading": "ゲームを読み込み中…",
+        "boot_failed": "ゲームを起動できませんでした",
+        "asset_select": "ゲームデータパックを選択",
+        "asset_reading": "{file} を読み込み中…",
+        "asset_valid": "BMP/BIN 検証完了",
+        "diagnostics": "診断",
+        "assets": "アセット一覧",
+        "waiting_validation": "検証待ち",
+        "tiles": "タイル",
+        "log": "ログ",
+        "clear": "消去",
+        "controls_help": "1P：5/1 コイン・スタート、方向キー、Z/X/C。標準ゲームパッドにも対応。",
+        "language_aria": "言語",
+        "game_aria": "Tengai ゲーム画面と仮想コントローラー"
+      },
+      "controls": {
+        "coin": "コイン",
+        "start": "スタート",
+        "button_c": "補助",
+        "button_b": "ボム",
+        "button_a": "ショット／溜め"
+      },
+      "atlas": {
+        "tiles": "背景タイル",
+        "sprites": "スプライト"
+      }
+    },
+    {
+      "id": "en",
+      "html_lang": "en",
+      "label": "ENGLISH",
+      "selector": {
+        "title": "LANGUAGE SELECT",
+        "confirm": "START OR A"
+      },
+      "ui": {
+        "status_selecting": "SELECT LANGUAGE",
+        "status_loading": "LOADING GAME…",
+        "status_running": "RUNNING",
+        "status_waiting_assets": "WAITING FOR GAME DATA",
+        "status_start_failed": "START FAILED",
+        "status_core_failed": "WASM CORE FAILED",
+        "boot_loading": "LOADING GAME…",
+        "boot_failed": "GAME START FAILED",
+        "asset_select": "SELECT GAME DATA PACK",
+        "asset_reading": "READING {file}…",
+        "asset_valid": "BMP/BIN VERIFIED",
+        "diagnostics": "DIAGNOSTICS",
+        "assets": "ASSET MANIFEST",
+        "waiting_validation": "WAITING FOR VALIDATION",
+        "tiles": "TILES",
+        "log": "LOG",
+        "clear": "CLEAR",
+        "controls_help": "P1: 5/1 coin/start, arrow keys to move, Z/X/C actions. Standard gamepads are supported.",
+        "language_aria": "Language",
+        "game_aria": "Tengai game and virtual controller"
+      },
+      "controls": {
+        "coin": "COIN",
+        "start": "START",
+        "button_c": "ASSIST",
+        "button_b": "BOMB",
+        "button_a": "SHOT/CHARGE"
+      },
+      "atlas": {
+        "tiles": "BACKGROUND TILES",
+        "sprites": "SPRITES"
+      }
+    },
+    {
+      "id": "zh-Hant",
+      "html_lang": "zh-Hant",
+      "label": "繁體",
+      "selector": {
+        "title": "語言選擇",
+        "confirm": "按 START 或 A"
+      },
+      "ui": {
+        "status_selecting": "選擇語言",
+        "status_loading": "正在載入遊戲…",
+        "status_running": "運行中",
+        "status_waiting_assets": "等待遊戲資料",
+        "status_start_failed": "啟動失敗",
+        "status_core_failed": "WASM 核心載入失敗",
+        "boot_loading": "正在載入遊戲…",
+        "boot_failed": "遊戲啟動失敗",
+        "asset_select": "選擇遊戲資料包",
+        "asset_reading": "正在讀取 {file}…",
+        "asset_valid": "BMP/BIN 驗證通過",
+        "diagnostics": "診斷",
+        "assets": "資源清單",
+        "waiting_validation": "等待驗證",
+        "tiles": "圖塊",
+        "log": "日誌",
+        "clear": "清除",
+        "controls_help": "1P：5/1 投幣／開始，方向鍵移動，Z/X/C 操作；亦支援標準手把。",
+        "language_aria": "語言",
+        "game_aria": "Tengai 遊戲與虛擬手把"
+      },
+      "controls": {
+        "coin": "投幣",
+        "start": "開始",
+        "button_c": "輔助",
+        "button_b": "炸彈",
+        "button_a": "射擊／蓄力"
+      },
+      "atlas": {
+        "tiles": "背景圖塊",
+        "sprites": "精靈圖塊"
+      }
+    },
+    {
+      "id": "yue-Hant",
+      "html_lang": "zh-HK",
+      "label": "廣東話",
+      "selector": {
+        "title": "語言選擇",
+        "confirm": "撳 START 或 A"
+      },
+      "ui": {
+        "status_selecting": "揀語言",
+        "status_loading": "載入緊遊戲…",
+        "status_running": "運行中",
+        "status_waiting_assets": "等緊遊戲資料",
+        "status_start_failed": "啟動失敗",
+        "status_core_failed": "WASM 核心載入失敗",
+        "boot_loading": "載入緊遊戲…",
+        "boot_failed": "遊戲啟動失敗",
+        "asset_select": "揀遊戲資料包",
+        "asset_reading": "讀取緊 {file}…",
+        "asset_valid": "BMP/BIN 驗證完成",
+        "diagnostics": "診斷",
+        "assets": "資源清單",
+        "waiting_validation": "等緊驗證",
+        "tiles": "圖塊",
+        "log": "記錄",
+        "clear": "清除",
+        "controls_help": "1P：5/1 入幣／開始，方向鍵移動，Z/X/C 操作；亦支援標準手掣。",
+        "language_aria": "語言",
+        "game_aria": "Tengai 遊戲同虛擬手掣"
+      },
+      "controls": {
+        "coin": "入幣",
+        "start": "開始",
+        "button_c": "輔助",
+        "button_b": "炸彈",
+        "button_a": "射擊／蓄力"
+      },
+      "atlas": {
+        "tiles": "背景圖塊",
+        "sprites": "精靈圖塊"
+      }
+    },
+    {
+      "id": "zh-Hans",
+      "html_lang": "zh-CN",
+      "label": "简体",
+      "selector": {
+        "title": "语言选择",
+        "confirm": "按 START 或 A"
+      },
+      "ui": {
+        "status_selecting": "选择语言",
+        "status_loading": "正在加载游戏…",
+        "status_running": "运行中",
+        "status_waiting_assets": "等待游戏数据",
+        "status_start_failed": "启动失败",
+        "status_core_failed": "WASM 核心加载失败",
+        "boot_loading": "正在加载游戏…",
+        "boot_failed": "游戏启动失败",
+        "asset_select": "选择游戏数据包",
+        "asset_reading": "正在读取 {file}…",
+        "asset_valid": "BMP/BIN 校验通过",
+        "diagnostics": "诊断",
+        "assets": "资源清单",
+        "waiting_validation": "等待校验",
+        "tiles": "图块",
+        "log": "日志",
+        "clear": "清空",
+        "controls_help": "1P：5/1 投币／开始，方向键移动，Z/X/C 操作；也支持标准手柄。",
+        "language_aria": "语言",
+        "game_aria": "Tengai 游戏与虚拟手柄"
+      },
+      "controls": {
+        "coin": "投币",
+        "start": "开始",
+        "button_c": "辅助",
+        "button_b": "炸弹",
+        "button_a": "射击／蓄力"
+      },
+      "atlas": {
+        "tiles": "背景图块",
+        "sprites": "精灵图块"
+      }
+    }
+  ]
+}

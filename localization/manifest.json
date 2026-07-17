@@ -1,0 +1,56 @@
+{
+  "schema": "tengai.game-localizations/v1",
+  "board_id": "psikyo-tengai",
+  "resources": {
+    "zh-Hans": {
+      "id": "tengaij-zh-Hans",
+      "source_set": "tengaij",
+      "video_patch": {
+        "file": "localization/zh-Hans.video-patch.bin",
+        "format": "tengai.video-patch/v2",
+        "size": 51224,
+        "crc32": "814db4d8",
+        "sha256": "b05184129050a9aa039e712e0e795a35a18fe5f2334d8eabfb3b03772fcec250",
+        "tile_entries": 114,
+        "sprite_entries": 165,
+        "overlay_entries": 1
+      },
+      "coverage": {
+        "translated_entries": 31,
+        "source_strings": [
+          "戦国ブレード",
+          "CREDIT",
+          "FREE",
+          "WARNING",
+          "This game is for use in Japan only. Sales, export, or operation outside this territory may violate international copyright and trademark laws and the violator is subject to severe penalties.",
+          "HARD",
+          "SPECIAL",
+          "BONUS",
+          "GAME OVER",
+          "CONTINUE",
+          "INSERT COINS!",
+          "START",
+          "PLEASE WAIT",
+          "TIME:",
+          "YES",
+          "NO",
+          "MIKO",
+          "TENGAI",
+          "HAGANE",
+          "SHO",
+          "JUNIS",
+          "AYIN",
+          "こより",
+          "天外",
+          "ハガネ",
+          "翔丸",
+          "ユーニス",
+          "終",
+          "THE END",
+          "PLAYER",
+          "SELECT"
+        ]
+      }
+    }
+  }
+}
