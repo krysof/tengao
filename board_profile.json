@@ -1092,7 +1092,7 @@
           "scroll_x_offset": 1030,
           "scroll_y_offset": 1026,
           "rowscroll_offset": 0,
-          "priority_bit": 2
+          "priority_bit": 1
         },
         {
           "ram_region": "layer1_ram",
@@ -1101,7 +1101,7 @@
           "scroll_x_offset": 1038,
           "scroll_y_offset": 1034,
           "rowscroll_offset": 512,
-          "priority_bit": 4
+          "priority_bit": 2
         }
       ],
       "background": {
