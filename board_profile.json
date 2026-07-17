@@ -1,5 +1,5 @@
 {
-  "schema": "tengao.board/v1",
+  "schema": "tengai.board/v1",
   "id": "psikyo-tengai",
   "name": "Psikyo Tengai / Sengoku Blade board",
   "provenance": {
@@ -30,7 +30,7 @@
         "clear_on_acknowledge": true
       },
       "aot": {
-        "schema": "tengao.m68k-aot/v1",
+        "schema": "tengai.m68k-aot/v1",
         "rom_sha256": "48ee3f0efe903788189ba358550ec3389ebaff3ef8bdcf4fb638800d04f6dbc6",
         "blocks": [
           {

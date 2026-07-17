@@ -1,4 +1,4 @@
-# TENGAO DIRECT C++ NATIVE
+# TENGAI DIRECT C++ NATIVE
 
 GitHub Pages production artifact for the portable Tengai port.
 

@@ -1,5 +1,5 @@
 {
-  "schema": "tengao.controls/v1",
+  "schema": "tengai.controls/v1",
   "display": {
     "help_zh": "实时输入：1P 投币/开始为 5/1，方向键移动，Z/X/C 操作；2P 为 6/2、WASD、F/G/H；F2 重启进入测试模式，F3 为服务投币。也支持标准双手柄。"
   },

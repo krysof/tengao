@@ -1,4 +1,4 @@
-TENGAO PRODUCTION THIRD-PARTY LICENSES
+TENGAI PRODUCTION THIRD-PARTY LICENSES
 
 ========================================================================
 nlohmann/json 3.12.0
