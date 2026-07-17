@@ -522,6 +522,81 @@
         "access": "rw"
       }
     ],
+    "state_layout": {
+      "structures": [
+        {
+          "id": "player",
+          "label": "Player state",
+          "region": "work_ram",
+          "offset": 13408,
+          "stride": 128,
+          "count": 2,
+          "fields": [
+            {
+              "id": "lives",
+              "label": "Remaining lives",
+              "offset": 17,
+              "width": 1,
+              "evidence": "P1/P2 replay differential and life-loss/continue transitions"
+            },
+            {
+              "id": "bombs",
+              "label": "Bomb stock",
+              "offset": 21,
+              "width": 1,
+              "evidence": "P1/P2 bomb-use replay differential"
+            },
+            {
+              "id": "shot_power",
+              "label": "Primary shot power",
+              "offset": 23,
+              "width": 1,
+              "evidence": "P1/P2 power-up replay differential"
+            },
+            {
+              "id": "invincibility_timer",
+              "label": "Invincibility timer",
+              "offset": 47,
+              "width": 1,
+              "evidence": "P1/P2 hit and respawn replay differential"
+            },
+            {
+              "id": "missile_power",
+              "label": "Secondary weapon power",
+              "offset": 55,
+              "width": 1,
+              "evidence": "P1/P2 secondary-weapon replay differential"
+            }
+          ]
+        }
+      ],
+      "globals": [
+        {
+          "id": "soft_reset_flag",
+          "label": "Software reset request",
+          "region": "work_ram",
+          "offset": 17842,
+          "width": 2,
+          "evidence": "reset-path replay reaches the ROM RESET instruction only when asserted"
+        },
+        {
+          "id": "credits",
+          "label": "Available credits",
+          "region": "work_ram",
+          "offset": 38361,
+          "width": 1,
+          "evidence": "coin/start/continue replay differential"
+        },
+        {
+          "id": "secret_character_unlocked",
+          "label": "Ayin selection unlock",
+          "region": "work_ram",
+          "offset": 99879,
+          "width": 1,
+          "evidence": "character-select replay exposes Ayin only when asserted"
+        }
+      ]
+    },
     "timing": {
       "id": "mame-hardware",
       "main_clock_hz": 16000000,
