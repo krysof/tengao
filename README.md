@@ -6,7 +6,7 @@ GitHub Pages production artifact for the portable Tengai port.
 - Complete M68K reset and exception vectors load from board_profile.json.
 - Fixed-point trigonometry loads its typed table from math-data.bin.
 - Source colors and frame-indexed palette cycles load from semantic palette-data.bin records.
-- Sprite compositions and stable frame references load from semantic animation-data.bin records.
+- Sprite compositions, stable frame references and priority layer masks load from semantic animation-data.bin records.
 - Collision bounds, damage profiles and Q10 scaling curves load from semantic collision-data.bin records.
 - PC-relative indexed dispatches load as absolute target PCs from semantic control-flow-data.bin records.
 - Object bytecode tokens, typed scalar/runtime parameters and dispatch metadata load from object-data.bin.
