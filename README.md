@@ -9,7 +9,7 @@ GitHub Pages production artifact for the portable Tengai port.
 - Sprite compositions, stable frame references and priority layer masks load from semantic animation-data.bin records.
 - Collision bounds, damage profiles and Q10 scaling curves load from semantic collision-data.bin records.
 - PC-relative indexed dispatches load as absolute target PCs from semantic control-flow-data.bin records.
-- Object bytecode tokens, typed scalar/runtime parameters and dispatch metadata load from object-data.bin.
+- Object bytecode, typed parameters, callbacks and the complete function-selector dispatch load from object-data.bin.
 - Stage scanline programs and raster segments load from semantic stage-scripts.bin records.
 - Scheduled/streamed layer maps and upload schedules load from semantic tilemap-data.bin records.
 - Glyph advances and diagnostic strings load from semantic text-data.bin resources.
