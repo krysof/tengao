@@ -709,6 +709,136 @@
               "evidence": "P1/P2 secondary-weapon replay differential"
             }
           ]
+        },
+        {
+          "id": "player_object",
+          "label": "Player-owned projectile/option object",
+          "region": "work_ram",
+          "offset": 19744,
+          "stride": 56,
+          "count": 8,
+          "fields": [
+            {
+              "id": "logic_state",
+              "label": "Object logic state",
+              "offset": 0,
+              "width": 2,
+              "type": "u16",
+              "evidence": "5,000-frame two-player write trace observes state-machine values 1, 2, 5 and 6 across all eight slots"
+            },
+            {
+              "id": "animation_state",
+              "label": "Animation state bits",
+              "offset": 2,
+              "width": 2,
+              "type": "u16",
+              "evidence": "write trace observes staged values 1, 2, 4, 8, 16 and 0x100 at the animation dispatcher writers"
+            },
+            {
+              "id": "slot_status",
+              "label": "Per-player slot status",
+              "offset": 4,
+              "width": 2,
+              "type": "u16",
+              "evidence": "player parameter initialization clears four 56-byte slots per player; two-player trace verifies all eight instances"
+            },
+            {
+              "id": "startup_timer",
+              "label": "Startup timer",
+              "offset": 6,
+              "width": 2,
+              "type": "u16",
+              "evidence": "object construction writes 20 before the first active update"
+            },
+            {
+              "id": "vector_base_y",
+              "label": "Trajectory base Y",
+              "offset": 16,
+              "width": 2,
+              "type": "s16",
+              "evidence": "the validated object-position block adds the signed vector-table Y component to this field"
+            },
+            {
+              "id": "vector_base_x",
+              "label": "Trajectory base X",
+              "offset": 18,
+              "width": 2,
+              "type": "s16",
+              "evidence": "the validated object-position block adds the signed vector-table X component to this field"
+            },
+            {
+              "id": "position_y",
+              "label": "Object screen Y position",
+              "offset": 20,
+              "width": 4,
+              "type": "fixed16_16",
+              "evidence": "5,000-frame trace records 7,562 fixed-point Y projections from vector_base_y and the active trajectory table"
+            },
+            {
+              "id": "position_x",
+              "label": "Object screen X position",
+              "offset": 24,
+              "width": 4,
+              "type": "fixed16_16",
+              "evidence": "5,000-frame trace records 7,562 fixed-point X projections from vector_base_x and the active trajectory table"
+            },
+            {
+              "id": "sprite_code",
+              "label": "Sprite object code",
+              "offset": 28,
+              "width": 2,
+              "type": "u16",
+              "evidence": "eight-slot initialization assigns the observed sprite codes 0xe5 through 0xee"
+            },
+            {
+              "id": "animation_descriptor",
+              "label": "Animation descriptor ROM address",
+              "offset": 32,
+              "width": 4,
+              "type": "rom_address",
+              "evidence": "eight-slot initialization selects ROM descriptor tables 0x0a044a or 0x0a050a"
+            },
+            {
+              "id": "animation_timer",
+              "label": "Animation frame timer",
+              "offset": 36,
+              "width": 2,
+              "type": "u16",
+              "evidence": "trace observes countdown sequences followed by reloads from animation_period"
+            },
+            {
+              "id": "animation_period",
+              "label": "Animation frame period",
+              "offset": 38,
+              "width": 2,
+              "type": "u16",
+              "evidence": "animation descriptor loaders copy periods 2 or 4 into this field"
+            },
+            {
+              "id": "animation_frame",
+              "label": "Animation frame index",
+              "offset": 40,
+              "width": 2,
+              "type": "u16",
+              "evidence": "trace observes deterministic increments and wrap-to-zero at the descriptor frame count"
+            },
+            {
+              "id": "animation_frame_count",
+              "label": "Animation frame count",
+              "offset": 42,
+              "width": 2,
+              "type": "u16",
+              "evidence": "descriptor loaders copy observed counts 4, 5 or 6 before the frame-index comparison"
+            },
+            {
+              "id": "animation_frame_data",
+              "label": "Animation frame-data ROM address",
+              "offset": 44,
+              "width": 4,
+              "type": "rom_address",
+              "evidence": "descriptor loaders and refresh block select verified ROM frame tables in the 0x06b2f0-0x06b644 range"
+            }
+          ]
         }
       ],
       "globals": [
