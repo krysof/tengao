@@ -9,7 +9,7 @@ GitHub Pages production artifact for the portable Tengai port.
 - Collision bounds and object damage profiles load from semantic collision-data.bin records.
 - Object bytecode tokens, typed parameters and dispatch metadata load from object-data.bin.
 - Stage scanline programs and raster segments load from semantic stage-scripts.bin records.
-- Layer maps and upload schedules load from semantic tilemap-data.bin records.
+- Scheduled/streamed layer maps and upload schedules load from semantic tilemap-data.bin records.
 - Glyph advances and diagnostic strings load from semantic text-data.bin resources.
 - Graphics load as standard indexed BMP atlases; other assets are BIN files.
 - Reference CPU and whole-system emulator cores are not linked.
