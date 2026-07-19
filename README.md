@@ -12,7 +12,7 @@ GitHub Pages production artifact for the portable Tengai port.
 - Object bytecode, typed parameters, callbacks and the complete function-selector dispatch load from object-data.bin.
 - Stage scanline programs and raster segments load from semantic stage-scripts.bin records.
 - Scheduled/streamed layer maps and upload schedules load from semantic tilemap-data.bin records.
-- Glyph advances and diagnostic strings load from semantic text-data.bin resources.
+- Glyph advances, complete regional warning strings, reference tables and presentation layout load from semantic text-data.bin resources.
 - Graphics load as standard indexed BMP atlases; other assets are BIN files.
 - Reference CPU and whole-system emulator cores are not linked.
 - C/C++ source and lifting JSON are not published here.
