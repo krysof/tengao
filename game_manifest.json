@@ -1,0 +1,11 @@
+{
+  "schema": "tengai.game-manifest/v1",
+  "board_id": "psikyo-tengai",
+  "sets": {
+    "tengaij": {
+      "title": "Sengoku Blade (Japan)",
+      "native_program": "tengaij",
+      "asset_pack_schema": "tengai.asset-pack/v2"
+    }
+  }
+}

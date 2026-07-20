@@ -2,18 +2,13 @@
   "schema": "tengai.board/v1",
   "id": "psikyo-tengai",
   "name": "Psikyo Tengai / Sengoku Blade board",
-  "provenance": {
-    "mame_source": "https://github.com/mamedev/mame/blob/master/src/mame/psikyo/psikyo.cpp",
-    "mame_video_source": "https://github.com/mamedev/mame/blob/master/src/mame/psikyo/psikyo_v.cpp",
-    "mame_revision": "a8acf5e8e91f72ebfb241b42c31eb70e441b12ab"
-  },
   "runtime": {
     "address_mask": 16777215,
     "rom_bindings": {
-      "main_program": "maincpu",
-      "audio_program": "audiocpu",
-      "tile_graphics": "tiles",
-      "sprite_graphics": "sprites",
+      "main_program": "native-program-space",
+      "audio_program": "audio-program-data-space",
+      "tile_graphics": "tile-graphics",
+      "sprite_graphics": "sprite-graphics",
       "sprite_lut": "sprite-lut"
     },
     "main_cpu": {
@@ -31,445 +26,8 @@
       },
       "aot": {
         "schema": "tengai.m68k-aot/v1",
-        "rom_sha256": "48ee3f0efe903788189ba358550ec3389ebaff3ef8bdcf4fb638800d04f6dbc6",
-        "blocks": [
-          {
-            "kind": "dual_copy_long_dbra",
-            "entry": 1822,
-            "source_address_registers": [
-              0,
-              1
-            ],
-            "destination_address_registers": [
-              2,
-              3
-            ],
-            "counter_data_register": 3,
-            "loop_cycles": 22,
-            "instructions": [
-              {
-                "pc": 1822,
-                "opcode": 9432,
-                "cycles": 8
-              },
-              {
-                "pc": 1824,
-                "opcode": 9945,
-                "cycles": 8
-              },
-              {
-                "pc": 1826,
-                "opcode": 20939,
-                "cycles": 6
-              }
-            ],
-            "observed_iterations": 177296
-          },
-          {
-            "kind": "counter_wait_zero_word",
-            "entry": 2558,
-            "counter_address": 4294836224,
-            "counter_increment": 1,
-            "signal_address": 4294874540,
-            "signal_mask": 65535,
-            "loop_cycles": 20,
-            "instructions": [
-              {
-                "pc": 2558,
-                "opcode": 21177,
-                "cycles": 8
-              },
-              {
-                "pc": 2564,
-                "opcode": 19065,
-                "cycles": 6
-              },
-              {
-                "pc": 2570,
-                "opcode": 26610,
-                "cycles": 6
-              }
-            ],
-            "observed_iterations": 13067185
-          },
-          {
-            "kind": "clear_word_indexed_counted",
-            "entry": 4492,
-            "base_address_register": 6,
-            "index_data_register": 2,
-            "index_scale": 2,
-            "displacement": -134,
-            "counter_increment": 1,
-            "limit": 67,
-            "loop_cycles": 23,
-            "instructions": [
-              {
-                "pc": 4492,
-                "opcode": 17014,
-                "cycles": 13
-              },
-              {
-                "pc": 4498,
-                "opcode": 21058,
-                "cycles": 2
-              },
-              {
-                "pc": 4500,
-                "opcode": 3138,
-                "cycles": 2
-              },
-              {
-                "pc": 4504,
-                "opcode": 28146,
-                "cycles": 6
-              }
-            ],
-            "observed_iterations": 105056
-          },
-          {
-            "kind": "add_word_indexed_counted",
-            "entry": 4660,
-            "base_address_register": 6,
-            "index_data_register": 2,
-            "index_scale": 2,
-            "source_displacement": -136,
-            "destination_displacement": -134,
-            "counter_increment": 1,
-            "limit": 67,
-            "loop_cycles": 34,
-            "instructions": [
-              {
-                "pc": 4660,
-                "opcode": 12342,
-                "cycles": 11
-              },
-              {
-                "pc": 4666,
-                "opcode": 53622,
-                "cycles": 13
-              },
-              {
-                "pc": 4672,
-                "opcode": 21058,
-                "cycles": 2
-              },
-              {
-                "pc": 4674,
-                "opcode": 3138,
-                "cycles": 2
-              },
-              {
-                "pc": 4678,
-                "opcode": 28140,
-                "cycles": 6
-              }
-            ],
-            "observed_iterations": 103422
-          },
-          {
-            "kind": "copy_word_indexed_counted",
-            "entry": 101044,
-            "index_data_register": 1,
-            "counter_increment": 1,
-            "limit": 224,
-            "copies": [
-              {
-                "source_address": 4294869296,
-                "source_scale": 4,
-                "destination_address": 4294870320,
-                "destination_scale": 2
-              },
-              {
-                "source_address": 4294871856,
-                "source_scale": 4,
-                "destination_address": 4294872880,
-                "destination_scale": 2
-              }
-            ],
-            "loop_cycles": 62,
-            "instructions": [
-              {
-                "pc": 101044,
-                "opcode": 12720,
-                "cycles": 26
-              },
-              {
-                "pc": 101058,
-                "opcode": 12720,
-                "cycles": 26
-              },
-              {
-                "pc": 101072,
-                "opcode": 21057,
-                "cycles": 2
-              },
-              {
-                "pc": 101074,
-                "opcode": 3137,
-                "cycles": 2
-              },
-              {
-                "pc": 101078,
-                "opcode": 28124,
-                "cycles": 6
-              }
-            ],
-            "observed_iterations": 175616
-          },
-          {
-            "kind": "copy_word_indexed_counted",
-            "entry": 101084,
-            "index_data_register": 1,
-            "counter_increment": 1,
-            "limit": 224,
-            "copies": [
-              {
-                "source_address": 4294869296,
-                "source_scale": 4,
-                "destination_address": 4294870832,
-                "destination_scale": 2
-              },
-              {
-                "source_address": 4294871856,
-                "source_scale": 4,
-                "destination_address": 4294873392,
-                "destination_scale": 2
-              }
-            ],
-            "loop_cycles": 62,
-            "instructions": [
-              {
-                "pc": 101084,
-                "opcode": 12720,
-                "cycles": 26
-              },
-              {
-                "pc": 101098,
-                "opcode": 12720,
-                "cycles": 26
-              },
-              {
-                "pc": 101112,
-                "opcode": 21057,
-                "cycles": 2
-              },
-              {
-                "pc": 101114,
-                "opcode": 3137,
-                "cycles": 2
-              },
-              {
-                "pc": 101118,
-                "opcode": 28124,
-                "cycles": 6
-              }
-            ],
-            "observed_iterations": 175616
-          },
-          {
-            "kind": "scale_xrgb555_counted",
-            "entry": 104628,
-            "source_address_register": 2,
-            "factor_address_register": 3,
-            "destination_data_register": 6,
-            "counter_data_register": 2,
-            "source_stride": 2,
-            "destination_stride": 2,
-            "counter_increment": 1,
-            "limit": 16,
-            "component_masks": [
-              31744,
-              992,
-              31
-            ],
-            "divisor_shift": 5,
-            "output_or_mask": 32768,
-            "loop_cycles": 187,
-            "instructions": [
-              {
-                "pc": 104628,
-                "opcode": 29184,
-                "cycles": 2
-              },
-              {
-                "pc": 104630,
-                "opcode": 12818,
-                "cycles": 6
-              },
-              {
-                "pc": 104632,
-                "opcode": 8257,
-                "cycles": 2
-              },
-              {
-                "pc": 104634,
-                "opcode": 577,
-                "cycles": 2
-              },
-              {
-                "pc": 104638,
-                "opcode": 60033,
-                "cycles": 6
-              },
-              {
-                "pc": 104640,
-                "opcode": 50131,
-                "cycles": 31
-              },
-              {
-                "pc": 104642,
-                "opcode": 28672,
-                "cycles": 2
-              },
-              {
-                "pc": 104644,
-                "opcode": 12289,
-                "cycles": 2
-              },
-              {
-                "pc": 104646,
-                "opcode": 576,
-                "cycles": 2
-              },
-              {
-                "pc": 104650,
-                "opcode": 8712,
-                "cycles": 2
-              },
-              {
-                "pc": 104652,
-                "opcode": 577,
-                "cycles": 2
-              },
-              {
-                "pc": 104656,
-                "opcode": 60033,
-                "cycles": 6
-              },
-              {
-                "pc": 104658,
-                "opcode": 50131,
-                "cycles": 31
-              },
-              {
-                "pc": 104660,
-                "opcode": 12353,
-                "cycles": 2
-              },
-              {
-                "pc": 104662,
-                "opcode": 29184,
-                "cycles": 2
-              },
-              {
-                "pc": 104664,
-                "opcode": 12808,
-                "cycles": 2
-              },
-              {
-                "pc": 104666,
-                "opcode": 577,
-                "cycles": 2
-              },
-              {
-                "pc": 104670,
-                "opcode": 32897,
-                "cycles": 2
-              },
-              {
-                "pc": 104672,
-                "opcode": 8256,
-                "cycles": 2
-              },
-              {
-                "pc": 104674,
-                "opcode": 12818,
-                "cycles": 6
-              },
-              {
-                "pc": 104676,
-                "opcode": 577,
-                "cycles": 2
-              },
-              {
-                "pc": 104680,
-                "opcode": 50131,
-                "cycles": 31
-              },
-              {
-                "pc": 104682,
-                "opcode": 18625,
-                "cycles": 4
-              },
-              {
-                "pc": 104684,
-                "opcode": 60033,
-                "cycles": 6
-              },
-              {
-                "pc": 104686,
-                "opcode": 28703,
-                "cycles": 2
-              },
-              {
-                "pc": 104688,
-                "opcode": 49792,
-                "cycles": 2
-              },
-              {
-                "pc": 104690,
-                "opcode": 8200,
-                "cycles": 2
-              },
-              {
-                "pc": 104692,
-                "opcode": 32897,
-                "cycles": 2
-              },
-              {
-                "pc": 104694,
-                "opcode": 64,
-                "cycles": 2
-              },
-              {
-                "pc": 104698,
-                "opcode": 8262,
-                "cycles": 2
-              },
-              {
-                "pc": 104700,
-                "opcode": 21638,
-                "cycles": 2
-              },
-              {
-                "pc": 104702,
-                "opcode": 12416,
-                "cycles": 4
-              },
-              {
-                "pc": 104704,
-                "opcode": 21642,
-                "cycles": 2
-              },
-              {
-                "pc": 104706,
-                "opcode": 21058,
-                "cycles": 2
-              },
-              {
-                "pc": 104708,
-                "opcode": 3138,
-                "cycles": 2
-              },
-              {
-                "pc": 104712,
-                "opcode": 28074,
-                "cycles": 6
-              }
-            ],
-            "observed_iterations": 100864
-          }
-        ]
+        "rom_sha256": "",
+        "blocks": []
       },
       "vector_table": {
         "format": "m68ec020-vector-table-v1",
@@ -743,6 +301,58 @@
         "observed_vectors": [
           28
         ]
+      },
+      "startup_memory_test": {
+        "format": "m68ec020-startup-memory-test-v1",
+        "source_endianness": "big",
+        "legacy_address": 125644,
+        "entry_bytes": 8,
+        "entry_count": 4,
+        "counter_encoding": "longword-count-minus-one",
+        "source_crc32": "24f6ba73",
+        "regions": [
+          {
+            "id": 0,
+            "role": "sprite_ram",
+            "target_address": 4194304,
+            "longword_count": 2048
+          },
+          {
+            "id": 1,
+            "role": "work_ram",
+            "target_address": 4294836224,
+            "longword_count": 32768
+          },
+          {
+            "id": 2,
+            "role": "video_window",
+            "target_address": 8388608,
+            "longword_count": 8192
+          },
+          {
+            "id": 3,
+            "role": "palette_ram",
+            "target_address": 6291456,
+            "longword_count": 2048
+          }
+        ],
+        "evidence": "0x402 loads the complete four-entry descriptor table. The boot routine first probes, then writes/verifies walking byte patterns, and finally clears each 32-bit hardware window.",
+        "evidence_replay": "tests/replays/tengaij_2p_coverage.replay.json",
+        "observed_frames": 5000,
+        "observed_reads": 32,
+        "reader_pcs": [
+          1034,
+          1036,
+          1060,
+          1062,
+          1090,
+          1092,
+          1136,
+          1138
+        ],
+        "consumer_signature_start": 1026,
+        "consumer_signature_end": 1150,
+        "consumer_signature_crc32": "a3e742f2"
       }
     },
     "memory_regions": [
@@ -2337,7 +1947,7 @@
       "ymf278b": {
         "clock_hz": 33868800,
         "clocks_per_sample": 768,
-        "sample_rom_region": "ymf-samples",
+        "sample_rom_region": "audio-samples",
         "register_port_count": 6
       }
     },
@@ -2450,31 +2060,23 @@
   "rom": {
     "regions": [
       {
-        "id": "maincpu",
+        "id": "native-program-space",
         "size": 1048576,
         "loads": [
           {
-            "role": "maincpu-lane10",
+            "role": "native-cpp-program",
             "destination": 0,
-            "group": 2,
-            "stride": 4,
-            "reverse_group": true
-          },
-          {
-            "role": "maincpu-lane32",
-            "destination": 2,
-            "group": 2,
-            "stride": 4,
-            "reverse_group": true
+            "group": 1,
+            "stride": 1
           }
         ]
       },
       {
-        "id": "audiocpu",
+        "id": "audio-program-data-space",
         "size": 131072,
         "loads": [
           {
-            "role": "audiocpu",
+            "role": "audio-program-data",
             "destination": 0,
             "group": 1,
             "stride": 1
@@ -2482,35 +2084,11 @@
         ]
       },
       {
-        "id": "sprites",
+        "id": "sprite-graphics",
         "size": 6291456,
         "loads": [
           {
-            "role": "sprites-0",
-            "destination": 0,
-            "group": 1,
-            "stride": 1
-          },
-          {
-            "role": "sprites-1",
-            "destination": 2097152,
-            "group": 1,
-            "stride": 1
-          },
-          {
-            "role": "sprites-2",
-            "destination": 4194304,
-            "group": 1,
-            "stride": 1
-          }
-        ]
-      },
-      {
-        "id": "tiles",
-        "size": 4194304,
-        "loads": [
-          {
-            "role": "tiles",
+            "role": "sprite-bitmap-atlas",
             "destination": 0,
             "group": 1,
             "stride": 1
@@ -2518,18 +2096,24 @@
         ]
       },
       {
-        "id": "ymf-samples",
+        "id": "tile-graphics",
         "size": 4194304,
         "loads": [
           {
-            "role": "ymf-samples-0",
+            "role": "tile-bitmap-atlas",
             "destination": 0,
             "group": 1,
             "stride": 1
-          },
+          }
+        ]
+      },
+      {
+        "id": "audio-samples",
+        "size": 4194304,
+        "loads": [
           {
-            "role": "ymf-samples-1",
-            "destination": 2097152,
+            "role": "audio-sample-data",
+            "destination": 0,
             "group": 1,
             "stride": 1
           }
@@ -2540,169 +2124,14 @@
         "size": 262144,
         "loads": [
           {
-            "role": "sprite-lut",
+            "role": "sprite-lut-data",
             "destination": 0,
             "group": 1,
             "stride": 1
           }
         ]
       }
-    ],
-    "sets": {
-      "tengaij": {
-        "title": "Sengoku Blade (Japan)",
-        "main_lanes": [
-          "2-u40.bin",
-          "3-u41.bin"
-        ],
-        "files": [
-          {
-            "name": "2-u40.bin",
-            "size": 524288,
-            "crc32": "ab6fe58a",
-            "role": "maincpu-lane10"
-          },
-          {
-            "name": "3-u41.bin",
-            "size": 524288,
-            "crc32": "02e42e39",
-            "role": "maincpu-lane32"
-          },
-          {
-            "name": "1-u63.bin",
-            "size": 131072,
-            "crc32": "2025e387",
-            "role": "audiocpu"
-          },
-          {
-            "name": "u20.bin",
-            "size": 2097152,
-            "crc32": "ed42ef73",
-            "role": "sprites-0"
-          },
-          {
-            "name": "u22.bin",
-            "size": 2097152,
-            "crc32": "8d21caee",
-            "role": "sprites-1"
-          },
-          {
-            "name": "u21.bin",
-            "size": 2097152,
-            "crc32": "efe34eed",
-            "role": "sprites-2"
-          },
-          {
-            "name": "u34.bin",
-            "size": 4194304,
-            "crc32": "2a2e2eeb",
-            "role": "tiles"
-          },
-          {
-            "name": "u61.bin",
-            "size": 2097152,
-            "crc32": "a63633c5",
-            "role": "ymf-samples-0"
-          },
-          {
-            "name": "u62.bin",
-            "size": 2097152,
-            "crc32": "3ad0c357",
-            "role": "ymf-samples-1"
-          },
-          {
-            "name": "u1.bin",
-            "size": 262144,
-            "crc32": "681d7d55",
-            "role": "sprite-lut"
-          },
-          {
-            "name": "4.u59",
-            "size": 4096,
-            "crc32": "e563b054",
-            "role": "pic16c57",
-            "optional": true
-          }
-        ],
-        "static_program": "tengaij"
-      },
-      "tengai": {
-        "title": "Tengai (World)",
-        "main_lanes": [
-          "5-u40.bin",
-          "4-u41.bin"
-        ],
-        "files": [
-          {
-            "name": "5-u40.bin",
-            "size": 524288,
-            "crc32": "90088195",
-            "role": "maincpu-lane10"
-          },
-          {
-            "name": "4-u41.bin",
-            "size": 524288,
-            "crc32": "0d53196c",
-            "role": "maincpu-lane32"
-          },
-          {
-            "name": "1-u63.bin",
-            "size": 131072,
-            "crc32": "2025e387",
-            "role": "audiocpu"
-          },
-          {
-            "name": "u20.bin",
-            "size": 2097152,
-            "crc32": "ed42ef73",
-            "role": "sprites-0"
-          },
-          {
-            "name": "u22.bin",
-            "size": 2097152,
-            "crc32": "8d21caee",
-            "role": "sprites-1"
-          },
-          {
-            "name": "u21.bin",
-            "size": 2097152,
-            "crc32": "efe34eed",
-            "role": "sprites-2"
-          },
-          {
-            "name": "u34.bin",
-            "size": 4194304,
-            "crc32": "2a2e2eeb",
-            "role": "tiles"
-          },
-          {
-            "name": "u61.bin",
-            "size": 2097152,
-            "crc32": "a63633c5",
-            "role": "ymf-samples-0"
-          },
-          {
-            "name": "u62.bin",
-            "size": 2097152,
-            "crc32": "3ad0c357",
-            "role": "ymf-samples-1"
-          },
-          {
-            "name": "u1.bin",
-            "size": 262144,
-            "crc32": "681d7d55",
-            "role": "sprite-lut"
-          },
-          {
-            "name": "4.u59",
-            "size": 4096,
-            "crc32": "e563b054",
-            "role": "pic16c57",
-            "optional": true
-          }
-        ],
-        "static_program": null
-      }
-    }
-  }
+    ]
+  },
+  "profile_purpose": "rom-free-runtime"
 }
