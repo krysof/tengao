@@ -11,7 +11,7 @@ GitHub Pages artifact for the portable high-level Tengai port.
 - Player lives, bomb inventory, hit/death/respawn rules and six stable character-bomb action roots load from semantic player-data.bin records.
 - Scene selection, regional/world presentation and streamed-layer descriptors load from semantic presentation-data.bin records.
 - Collision bounds, damage profiles and Q10 scaling curves load from semantic collision-data.bin records.
-- The complete 13,297-command object-script catalog loads from object-actions.bin as address-free high-level actions with zero unclassified commands.
+- The complete 15,314-command object-script catalog loads from object-actions.bin as address-free high-level actions with zero unclassified commands.
 - Scene entry/update bindings and scene transitions load from address-free scene-flow-data.bin records.
 - Stage scanline programs and raster segments load from semantic stage-scripts.bin records.
 - Scheduled and streamed layer maps and their upload schedules load from semantic tilemap-data.bin records.
